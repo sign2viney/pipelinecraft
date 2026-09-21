@@ -1,243 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viney Kumar — Aspiring DevOps Engineer</title>
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viney Kumar — DevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="nav" id="top">
-  <div class="nav-inner">
-    <a class="nav-logo" href="#top">viney<span class="accent">.log</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#journey">Journey</a>
-      <a href="#projects">Projects</a>
-      <a href="#toolbox">Toolbox</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- ======= NAVBAR ======= -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Viney's CV Website<span>.</span></a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home"     class="nav-link active">Home</a>
+        <a href="#about"    class="nav-link">About</a>
+        <a href="#skills"   class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <i class="ti ti-menu-2"></i>
+      </button>
+    </div>
+  </header>
 
-<main>
-
-  <section class="hero">
-    <div class="section-inner hero-inner">
-      <div class="hero-text">
-        <p class="hero-kicker">Aspiring DevOps Engineer</p>
-        <h1>Learning to build, ship, and run infrastructure — in public.</h1>
-        <p class="hero-sub">I'm Viney Kumar. A while back I didn't know what a pipeline was. Now I'm automating deployments, breaking Docker containers on purpose, and slowly making peace with YAML indentation.</p>
-        <div class="hero-actions">
-          <a href="#journey" class="btn btn-primary">See my progress</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+  <!-- ======= HERO ======= -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Viney Kumar</h1>
+          <h2 class="hero-role">DevOps Engineer</h2>
+          <p class="hero-bio">
+            Passionate about automating infrastructure, building CI/CD pipelines,
+            and deploying scalable cloud systems. Bridging the gap between
+            development and operations.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact"  class="btn btn-outline">Hire Me</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/vineyprasad"    target="_blank" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
+            <a href="https://linkedin.com/in/vineyprasad" target="_blank" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+            <a href="mailto:viney.prasad@email.com"     aria-label="Email"><i class="ti ti-mail"></i></a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <div class="avatar-ring">
+            <div class="avatar-inner">VK</div>
+          </div>
+          <div class="avatar-badge badge-docker">
+            <i class="ti ti-brand-docker"></i> Docker
+          </div>
+          <div class="avatar-badge badge-aws">
+            <i class="ti ti-cloud"></i> AWS
+          </div>
+          <div class="avatar-badge badge-k8s">
+            <i class="ti ti-drone"></i> K8s
+          </div>
         </div>
       </div>
-
-      <div class="terminal" aria-hidden="true">
-        <div class="terminal-bar">
-          <span class="terminal-dots"><span></span><span></span><span></span></span>
-          <span class="terminal-title">viney@devops:~</span>
+      <div class="hero-stats">
+        <div class="stat-box">
+          <span class="stat-num">12+</span>
+          <span class="stat-lbl">Technologies</span>
         </div>
-        <div class="terminal-body" id="terminalBody"></div>
+        <div class="stat-box">
+          <span class="stat-num">4</span>
+          <span class="stat-lbl">Projects</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">AWS</span>
+          <span class="stat-lbl">Primary Cloud</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">Open</span>
+          <span class="stat-lbl">To Opportunities</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <div class="section-inner">
-      <h2>About</h2>
-      <p>I come from a background outside tech and switched into infrastructure because I liked the idea of systems that fix themselves before anyone notices they broke. Most days that means reading logs, rebuilding a broken container for the third time, and slowly getting less scared of the terminal.</p>
-      <ul class="facts">
-        <li><span>Base</span>Punjab, India</li>
-        <li><span>Focus</span>Cloud infrastructure &amp; automation</li>
-        <li><span>Currently</span>Preparing for AWS Cloud Practitioner</li>
-        <li><span>Approach</span>Learn by breaking things, then fixing them properly</li>
-      </ul>
+  <!-- ======= ABOUT ======= -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-sub">A fresher DevOps engineer eager to automate, deploy, and improve systems.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a DevOps fresher based in <strong>Chandigarh, Punjab, India</strong> with a strong
+            foundation in cloud infrastructure, containerization, and automation. My goal is to
+            help teams ship faster and more reliably by building efficient pipelines and scalable
+            infrastructure.
+          </p>
+          <p>
+            I enjoy working at the intersection of development and operations — writing scripts,
+            configuring infrastructure as code, setting up monitoring, and making sure everything
+            runs smoothly in production.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label"><i class="ti ti-user"></i> Name</span>
+              <span class="info-value">Viney Kumar</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label"><i class="ti ti-map-pin"></i> Location</span>
+              <span class="info-value">Chandigarh, Punjab</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label"><i class="ti ti-briefcase"></i> Role</span>
+              <span class="info-value">DevOps Engineer</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label"><i class="ti ti-circle-check"></i> Status</span>
+              <span class="info-value available">Available for hire</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label"><i class="ti ti-mail"></i> Email</span>
+              <span class="info-value">viney.prasad@email.com</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label"><i class="ti ti-school"></i> Education</span>
+              <span class="info-value">B.Tech, Computer Science</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" download>
+            <i class="ti ti-download"></i> Download CV
+          </a>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="acard-icon"><i class="ti ti-git-branch"></i></div>
+            <h4>CI/CD Pipelines</h4>
+            <p>Building automated pipelines with Jenkins and GitHub Actions for fast, reliable deployments.</p>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon"><i class="ti ti-cloud"></i></div>
+            <h4>Cloud Infrastructure</h4>
+            <p>Provisioning and managing AWS infrastructure using Terraform and best practices.</p>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon"><i class="ti ti-brand-docker"></i></div>
+            <h4>Containerization</h4>
+            <p>Containerizing apps with Docker and orchestrating workloads with Kubernetes.</p>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon"><i class="ti ti-chart-dots-3"></i></div>
+            <h4>Monitoring</h4>
+            <p>Setting up full observability with Prometheus, Grafana, and alerting pipelines.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="journey" class="journey">
-    <div class="section-inner">
-      <h2>Learning journey</h2>
-      <p class="section-lead">Roughly the order I picked things up — and the order I'd recommend to anyone starting out.</p>
+  <!-- ======= SKILLS ======= -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Skills Overview</h2>
+        <p class="section-sub">Technologies and tools I use to build and manage infrastructure.</p>
+      </div>
 
-      <ol class="timeline" id="timeline">
+      <div class="filter-bar" role="group">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="cicd">CI/CD</button>
+        <button class="filter-btn" data-cat="cloud">Cloud</button>
+        <button class="filter-btn" data-cat="containers">Containers</button>
+        <button class="filter-btn" data-cat="iac">IaC</button>
+        <button class="filter-btn" data-cat="monitoring">Monitoring</button>
+        <button class="filter-btn" data-cat="scripting">Scripting</button>
+      </div>
 
-        <li class="timeline-item" data-status="comfortable">
-          <span class="timeline-marker"></span>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>Linux</h3>
-              <span class="status status-comfortable">Comfortable</span>
-            </div>
-            <p>Shell fundamentals, file permissions, process management, systemd services, and enough <code>sed</code>/<code>awk</code> to be dangerous.</p>
-            <div class="progress"><div class="progress-fill" style="--value:90%"></div></div>
-            <p class="field-note">Field note — daily driver is Ubuntu Server on a home-lab Raspberry Pi cluster.</p>
-          </div>
-        </li>
-
-        <li class="timeline-item" data-status="comfortable">
-          <span class="timeline-marker"></span>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>Git</h3>
-              <span class="status status-comfortable">Comfortable</span>
-            </div>
-            <p>Branching strategies, interactive rebase, resolving merge conflicts without panicking, and writing commit messages I'd actually want to read later.</p>
-            <div class="progress"><div class="progress-fill" style="--value:85%"></div></div>
-            <p class="field-note">Field note — rebuilt a tangled feature branch history using interactive rebase instead of nuking it.</p>
-          </div>
-        </li>
-
-        <li class="timeline-item" data-status="comfortable">
-          <span class="timeline-marker"></span>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>GitHub</h3>
-              <span class="status status-comfortable">Comfortable</span>
-            </div>
-            <p>Pull request workflows, code review etiquette, issue triage, branch protection rules, and the basics of GitHub Actions.</p>
-            <div class="progress"><div class="progress-fill" style="--value:80%"></div></div>
-            <p class="field-note">Field note — set up branch protection and required reviews on a small team project.</p>
-          </div>
-        </li>
-
-        <li class="timeline-item" data-status="practicing">
-          <span class="timeline-marker"></span>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>Docker</h3>
-              <span class="status status-practicing">Practicing</span>
-            </div>
-            <p>Writing multi-stage Dockerfiles, keeping images small, and wiring up local dev stacks with Docker Compose.</p>
-            <div class="progress"><div class="progress-fill" style="--value:60%"></div></div>
-            <p class="field-note">Field note — cut an image from 900MB to 140MB with a multi-stage build.</p>
-          </div>
-        </li>
-
-        <li class="timeline-item" data-status="learning">
-          <span class="timeline-marker"></span>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>CI/CD pipelines</h3>
-              <span class="status status-learning">Learning</span>
-            </div>
-            <p>Building GitHub Actions workflows for lint, test, and build; reading up on Jenkins before writing my first pipeline there.</p>
-            <div class="progress"><div class="progress-fill" style="--value:35%"></div></div>
-            <p class="field-note">Field note — first workflow that lints, tests, and pushes an image on every merge to main.</p>
-          </div>
-        </li>
-
-        <li class="timeline-item" data-status="learning">
-          <span class="timeline-marker"></span>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>AWS</h3>
-              <span class="status status-learning">Learning</span>
-            </div>
-            <p>EC2, S3, and IAM fundamentals — working through hands-on labs toward the Cloud Practitioner certification.</p>
-            <div class="progress"><div class="progress-fill" style="--value:25%"></div></div>
-            <p class="field-note">Field note — deployed a static site to S3 with a locked-down IAM policy.</p>
-          </div>
-        </li>
-
-      </ol>
+      <div class="skills-grid" id="skillsGrid"></div>
     </div>
   </section>
 
-  <section id="projects" class="projects">
-    <div class="section-inner">
-      <h2>Projects</h2>
-      <p class="section-lead">Small, real things I've built while learning — not tutorials left half-finished.</p>
+  <!-- ======= PROJECTS ======= -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Hands-on projects covering the full DevOps lifecycle.</p>
+      </div>
+      <div class="projects-grid">
 
-      <div class="repo-list">
-        <article class="repo">
-          <div class="repo-head">
-            <h3>home-lab-provisioning</h3>
-            <span class="repo-tag">bash · ansible</span>
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="ti ti-git-branch"></i></div>
+            <span class="project-num">01</span>
           </div>
-          <p>Scripts that provision a three-node Raspberry Pi cluster from a fresh SD card: users, SSH hardening, and base packages, all idempotent.</p>
+          <h3>CI/CD Pipeline Setup</h3>
+          <p>End-to-end CI/CD pipeline using Jenkins and GitHub Actions for a Node.js app with automated testing, Docker image builds, and deployment to AWS EC2.</p>
+          <div class="project-tech">
+            <span>Jenkins</span><span>GitHub Actions</span><span>Docker</span><span>AWS EC2</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="ti ti-brand-github"></i> Code</a>
+            <a href="#" class="project-link"><i class="ti ti-external-link"></i> Demo</a>
+          </div>
         </article>
 
-        <article class="repo">
-          <div class="repo-head">
-            <h3>dockerized-flask-app</h3>
-            <span class="repo-tag">docker · flask · postgres</span>
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="ti ti-topology-star"></i></div>
+            <span class="project-num">02</span>
           </div>
-          <p>A small API containerized with a multi-stage Dockerfile, backed by Postgres, wired together with Docker Compose for one-command local setup.</p>
+          <h3>Infrastructure as Code</h3>
+          <p>Provisioned complete AWS infrastructure with Terraform — VPC, EC2, S3, security groups — using modular structure for reusability and version control.</p>
+          <div class="project-tech">
+            <span>Terraform</span><span>AWS VPC</span><span>S3</span><span>IAM</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="ti ti-brand-github"></i> Code</a>
+            <a href="#" class="project-link"><i class="ti ti-external-link"></i> Demo</a>
+          </div>
         </article>
 
-        <article class="repo">
-          <div class="repo-head">
-            <h3>ci-pipeline-demo</h3>
-            <span class="repo-tag">github actions · yaml</span>
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="ti ti-brand-docker"></i></div>
+            <span class="project-num">03</span>
           </div>
-          <p>A GitHub Actions workflow that lints, tests, builds, and pushes a Docker image to a registry on every push to main.</p>
+          <h3>Containerized Deployment</h3>
+          <p>Containerized a multi-service web app with Docker Compose, then deployed to a Kubernetes cluster with deployment manifests, services, and ingress rules.</p>
+          <div class="project-tech">
+            <span>Docker</span><span>Kubernetes</span><span>Helm</span><span>YAML</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="ti ti-brand-github"></i> Code</a>
+            <a href="#" class="project-link"><i class="ti ti-external-link"></i> Demo</a>
+          </div>
         </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="ti ti-chart-dots-3"></i></div>
+            <span class="project-num">04</span>
+          </div>
+          <h3>Monitoring Stack</h3>
+          <p>Full observability stack with Prometheus scraping system metrics, Grafana dashboards for CPU/memory, and Alertmanager for routing notifications.</p>
+          <div class="project-tech">
+            <span>Prometheus</span><span>Grafana</span><span>Alertmanager</span><span>Node Exporter</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="ti ti-brand-github"></i> Code</a>
+            <a href="#" class="project-link"><i class="ti ti-external-link"></i> Demo</a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <section id="toolbox" class="toolbox">
-    <div class="section-inner">
-      <h2>Toolbox</h2>
-      <div class="chips">
-        <span class="chip chip-comfortable">Linux</span>
-        <span class="chip chip-comfortable">Bash</span>
-        <span class="chip chip-comfortable">Git</span>
-        <span class="chip chip-comfortable">GitHub</span>
-        <span class="chip chip-practicing">Docker</span>
-        <span class="chip chip-practicing">Docker Compose</span>
-        <span class="chip chip-practicing">GitHub Actions</span>
-        <span class="chip chip-learning">Jenkins</span>
-        <span class="chip chip-learning">AWS EC2</span>
-        <span class="chip chip-learning">AWS S3</span>
-        <span class="chip chip-learning">AWS IAM</span>
-        <span class="chip chip-next">Terraform — next up</span>
-        <span class="chip chip-practicing">Nginx</span>
-        <span class="chip chip-comfortable">YAML</span>
+  <!-- ======= CONTACT ======= -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Talk</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-sub">Open to DevOps, Cloud, and SRE roles. Feel free to reach out.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ti ti-mail"></i></div>
+            <div>
+              <p class="contact-label">Email</p>
+              <a href="mailto:viney.prasad@email.com" class="contact-value">viney.prasad@email.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ti ti-brand-linkedin"></i></div>
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <a href="https://linkedin.com/in/vineykumar" target="_blank" class="contact-value">linkedin.com/in/vineykumar</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ti ti-brand-github"></i></div>
+            <div>
+              <p class="contact-label">GitHub</p>
+              <a href="https://github.com/vineykumar" target="_blank" class="contact-value">github.com/vineykumar</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ti ti-map-pin"></i></div>
+            <div>
+              <p class="contact-label">Location</p>
+              <p class="contact-value">Chandigarh, India</p>
+            </div>
+          </div>
+          <div class="availability-badge">
+            <span class="avail-dot"></span>
+            Currently available for opportunities
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Job Opportunity" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="ti ti-send"></i> Send Message
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <div class="section-inner">
-      <h2>Get in touch</h2>
-      <p>Open to internships and junior DevOps roles. If you're hiring, or just want to talk about home labs, I'd like to hear from you.</p>
-      <div class="contact-grid">
-        <a class="contact-link" href="mailto:vineykumar@example.com">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">vineykumar@example.com</span>
-        </a>
-        <a class="contact-link" href="https://github.com/vineykumar" target="_blank" rel="noopener">
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">github.com/vineykumar</span>
-        </a>
-        <a class="contact-link" href="https://linkedin.com/in/vineykumar" target="_blank" rel="noopener">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">linkedin.com/in/vineykumar</span>
-        </a>
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="nav-logo">VP<span>.</span></span>
+      <p>© <span id="year"></span> Viney Prasad. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/vineyprasad"       target="_blank" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
+        <a href="https://linkedin.com/in/vineyprasad"  target="_blank" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+        <a href="mailto:viney.prasad@email.com"        aria-label="Email"><i class="ti ti-mail"></i></a>
       </div>
     </div>
-  </section>
+  </footer>
 
-</main>
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="ti ti-arrow-up"></i>
+  </a>
 
-<footer class="footer">
-  <div class="section-inner footer-inner">
-    <p>Built while learning. <span id="year"></span></p>
-    <a href="#top" class="back-to-top">Back to top</a>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
